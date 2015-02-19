@@ -16,15 +16,15 @@ var dataFileToAdd = 'data/overpass.geojson';
 
 var featureLayer = L.mapbox.featureLayer();
     
-    featureLayer.loadURL(dataFileToAdd);
+    featureLayer.loadUrl(dataFileToAdd);
     featureLayer.addTo(map);
 
 featureLayer.on('ready' function(){
-    this.setStyle(){
+    this.setStyle({
       "marker-color": "#777777",
-      "marker-size": "medium",
+      "marker-size": "medium"
     });
     map.fitBounds(featureLayer.getBounds());
 });
 
-
+///////////////////////////////
